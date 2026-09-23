@@ -1,0 +1,140 @@
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  background: #111820;
+  border-right: 1px solid #26313d;
+  color: #f8fafc;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  margin-bottom: 36px;
+}
+
+.sidebar-logo h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sidebar-logo p {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Profile circle */
+
+.profile-circle {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #6366f1;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.profile-circle:hover {
+  background: #5558e8;
+  transform: scale(1.05);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 11px 12px;
+  border-radius: 8px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: #1a222c;
+  color: #f8fafc;
+}
+
+.sidebar-link.active {
+  background: #6366f1;
+  color: #ffffff;
+}
+
+.sidebar-logout {
+  margin-top: auto;
+  padding: 11px 12px;
+  border: 1px solid #26313d;
+  border-radius: 8px;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.sidebar-logout:hover {
+  background: #1a222c;
+  color: #f8fafc;
+  border-color: #3b4654;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid #26313d;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 20px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-link {
+    flex: 1;
+    text-align: center;
+  }
+
+  .sidebar-logout {
+    margin-top: 20px;
+  }
+}
